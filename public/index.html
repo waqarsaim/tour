@@ -29,15 +29,56 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+   
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <script>
+      $(function () {
+          $(".locationlistboats").select2({
+              width: '100%',
+              allowClear: true,
+              maximumSelectionSize: 1,
+              placeholder: "Start typing",
+              data: JSON.parse('[{"text":"boats","children":[{"id":"76","text":"Motor boat Custom Build Luxury - 2008 (refit 2008)","module":"boat","disabled":"false"},{"id":"77","text":"Motor boat Azimut 78 Flybridge - 2007 (refit 2016)","module":"boat","disabled":"false"},{"id":"74","text":"Motor boat Custom build - 2000 (refit 2000)","module":"boat","disabled":"false"},{"id":"75","text":"Motor boat Custom Build Luxury - 2000 (refit 2000)","module":"boat","disabled":"false"},{"id":"72","text":"Motor boat Custom Built - 2005 (refit 2017)","module":"boat","disabled":"false"},{"id":"73","text":"Motor boat Custom build - 2005 (refit 2005)","module":"boat","disabled":"false"},{"id":"70","text":"Motor boat Custom Built (2010)","module":"boat","disabled":"false"},{"id":"71","text":"Motor boat Custom Built - 2012 (refit 2016)","module":"boat","disabled":"false"},{"id":"67","text":"Sailboat Gaff Schooner - 1990 (refit 2016)","module":"boat","disabled":"false"},{"id":"68","text":"Motor boat Custom Built - 2016 (refit 2016)","module":"boat","disabled":"false"},{"id":"69","text":"Motor boat Custom Built (2005)","module":"boat","disabled":"false"},{"id":"65","text":"Motor boat Custom Built (1970)","module":"boat","disabled":"false"},{"id":"66","text":"Motor boat Custom Built (1970)","module":"boat","disabled":"false"},{"id":"63","text":"Motor boat Custom Built (1970)","module":"boat","disabled":"false"},{"id":"64","text":"Motor boat Custom Built - 1970 (refit 2018)","module":"boat","disabled":"false"},{"id":"61","text":"Motor boat Skipper BSK (2017)","module":"boat","disabled":"false"},{"id":"62","text":"Motor boat Sunseeker 90 - 2008 (refit 2019)","module":"boat","disabled":"false"},{"id":"59","text":"Motor boat Custom Built - 2014 (refit 2018)","module":"boat","disabled":"false"},{"id":"60","text":"Motor boat Sunseeker 64 - 2008 (refit 2018)","module":"boat","disabled":"false"},{"id":"57","text":"Motor boat Sunseeker 902","module":"boat","disabled":"false"},{"id":"58","text":"Motor boat San Lorenzo 72 - 2006 (refit 2016)","module":"boat","disabled":"false"},{"id":"78","text":"Catamaran Lagoon 440 - 2009 (refit 2019)","module":"boat","disabled":"false"},{"id":"79","text":"Catamaran Scape Yachts 39 (2015)","module":"boat","disabled":"false"},{"id":"80","text":"Motor Catamaran Scape Yachts 42 (2018)","module":"boat","disabled":"false"},{"id":"81","text":"Speedboat Bravo 410 - 2016 (refit 2016)","module":"boat","disabled":"false"},{"id":"82","text":"Speedboat Bravo 410 - 2015 (refit 2015)","module":"boat","disabled":"false"},{"id":"83","text":"Speedboat Bravo 410 - 2017 (refit 2017)","module":"boat","disabled":"false"},{"id":"84","text":"Speedboat Bravo 410 (2018)","module":"boat","disabled":"false"},{"id":"85","text":"Speedboat Bravo 410 (2017)","module":"boat","disabled":"false"}]},{"text":"Locations","children":[{"id":"4","text":"Singapore, Singapore","module":"location","disabled":"false"},{"id":"9","text":"United Kingdom, London","module":"location","disabled":"false"},{"id":"10","text":"Turkey, Istanbul","module":"location","disabled":"false"},{"id":"13","text":"Hong Kong, Hong Kong","module":"location","disabled":"false"},{"id":"2998","text":"NP, Nepalganj","module":"location","disabled":"false"},{"id":"5545","text":"US, South Bend","module":"location","disabled":"false"},{"id":"8442","text":"LK, Colombo","module":"location","disabled":"false"},{"id":"8470","text":"United Arab Emirates, Dubai","module":"location","disabled":"false"}]}]'),
+              initSelection: function (element, callback) {
+              callback({id: 1, text: 'Search by Listing or City Name'})
+          }
+          });
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+          $(".locationlistboats").on("select2-open",
+              function (e) {
+                  $(".select2-drop-mask");
+                  $(".formSection").trigger("click")
+              });
+          $(".locationlistboats").on("select2-selecting", function (e) {
+              $(".modType").val(e.object.module);
+              $(".searching").val(e.object.id);
+              $("#txtsearch").val(e.object.text);
+          })
+      })
+  </script>
+  <script type="text/javascript">
+    $( document ).ready(function() {
+        var check = document.getElementById('checktype').value;
+    if(check == 'return') {
+
+    }else{
+        $(".hidediv").hide();
+        $(".class12").addClass('col-12');
+    }
+    });
+    //Radio Button disable end date
+    $(".oneway").click(function() {
+        $("#tarcoend").prop('disabled', true);
+        $(".hidediv").hide();
+        $(".class12").addClass('col-12');
+    });
+    //Radio Button enable end date
+    $(".return").click(function() {
+        $("#tarcoend").removeAttr('disabled');
+        $(".hidediv").show();
+        $(".class12").removeClass('col-12');
+    });
+
+</script>   
   </body>
 </html>

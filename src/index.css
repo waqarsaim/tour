@@ -6,7 +6,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -51,3 +50,7 @@ The navbar toggle appears at this breakpoint */
   .navbar-nav{
     float: right;
   }
+  .logo1{
+    float: left;
+    margin-top: -50px;
+  } 

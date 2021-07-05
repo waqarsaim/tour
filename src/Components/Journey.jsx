@@ -1,8 +1,11 @@
 import React from "react";
-
+import Hotel from './Hotel'
+import Flights from "./Flights";
 const Journey = () => {
   return (
     <div>
+    <Hotel />
+    <Flights />
       <div className="hero-form-absolute" id="search">
         <div className="container-fluid">
           <div className="row gap-40 gap-lg-60 align-items-center fe">

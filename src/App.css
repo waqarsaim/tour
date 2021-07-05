@@ -8,8 +8,9 @@ body p {
   margin: 0;
   width: 100%;
 }
-.logo1{
-  background-color: #000;
+.navbar-collapse {
+  float: right;
+
 }
 .btn-success{
   float: right;
@@ -117,4 +118,7 @@ a:hover {
 }
 .foot{
   background-color: brown;
+}
+.input-group{
+  float: right;
 }
