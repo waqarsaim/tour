@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+body p {
+  font-family: "Khula";
+  font-style: "normal";
+  font-weight: "300";
+  font-size: 16px;
+  text-transform: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo1{
+  background-color: #000;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-success{
+  float: right;
+  margin-top: 15px;
+  margin-right: 10px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+  font-family: 'Ecoganic';
+  src: url(assets/fonts/ecoganic/Ecoganic.woff) format('embedded-opentype'), url('Ecoganic.woff') format('woff'), url('Ecoganic.ttf') format('truetype'), url('Ecoganic.svg#Ecoganic') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
-
-.App-link {
-  color: #61dafb;
+.navbar {
+  background-color: white !important;
+  position: fixed;
+  top: 0; 
+  width: 100%; 
+} 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.menu-list a {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.collapse{
+  float: right;
+  margin-left: 10%;
+}
+.top-bar-section ul li > a {
+  font-family: "Khula";
+  font-style: "normal";
+  font-weight: "600";
+  font-size: 15px;
+  text-transform: none;
+  float: right;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.menu-list a {
+  font-family: "Oxygen";
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  float: right;
+}
+.nav-navbar .open .dropdown-menu > .active > a,
+.nav-navbar .open .dropdown-menu > .active > a:hover,
+.nav-navbar .open .dropdown-menu > .active > a:focus {
+  color: black;
+  background-color: rgb(36, 29, 29);
+}
+.navbar li:hover {
+  border-bottom: 1px solid red;
+  color: red;
+}
+.collapse navbar-collapse li,
+a:hover {
+  text-decoration: none;
+  list-style-type: none;
+}
+.nav > li {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-family: unset;
+  margin-top: 10px;
+  font-weight: bold;
+  float: right;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  min-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  background-color: #000;
+  float: right;
+}
+.navbar-nav{
+  float: right;
+}
+.dropdown:hover .dropdown-menu{
+  display: block;
+  color: #000;
+  background-color: black;
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  color: black;
+  background-color: black;
+}
+.foot{
+  background-color: brown;
 }
