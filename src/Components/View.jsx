@@ -8,9 +8,18 @@ import Journey from "./Journey"
 const View = () => {
     return (
         <div>
+          <div className="container-fluid position-absolute top-50">
   <Journey />
-  
- <Carousel fade>
+  </div>
+<div >
+<img
+      className=""
+      src={pic2}
+      alt="First slide"
+      width="1348px"
+      height="640px"
+    />
+ {/*<Carousel fade>
   <Carousel.Item>
     <img
       className="d-block w-100"
@@ -47,6 +56,8 @@ const View = () => {
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel> 
+*/}
+</div>
 
         </div>
     )
